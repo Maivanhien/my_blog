@@ -1,0 +1,26 @@
+<h1 style="text-align: center; font-size: 3rem; margin-bottom: 3rem;">Kết quả tìm kiếm: <%= @parameter %></h1>
+<div class="row">
+  <% if @posts.blank? %>
+    <div style="display: block; margin: auto;">
+      <img src="https://coin98.net/static/images/coin98/img-search-none.png" alt="search icon" style="margin: auto; max-width: 7rem; margin-left: 4.5rem; margin-bottom: 1.5rem;">
+      <p style="margin: auto; font-size: 1.4rem;">Không tìm thấy kết quả</p>
+    </div>
+  <% else %>
+    <% @posts.each do |post| %>
+      <div class="col-md-6 col-lg-4">
+        <%= link_to blog_post_path(post), class: 'text-decoration-none' do %>
+          <div class="card post-card">
+            <div class="boder">
+              <div class="layer"><i class="fas fa-mouse" style="margin-top: 25%; margin-left: 50%; font-size: 30px; color: #0dc7e5;"></i></div>
+              <div class="header-image" style="background-image: url(<%= url_for(post.header_image) %>);"></div>
+            </div>
+            <div class="card-body d-flex flex-column bg-light">
+              <h5 class="card-title"><%= post.title %></h5>
+              <p class="card-text"><%= truncate(post.description, length: 100) %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

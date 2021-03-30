@@ -1,0 +1,180 @@
+<div class="row bg-light" style="border-radius: 12px; overflow: hidden; margin-bottom: 3rem;">
+  <div class="col-12 col-sm-12 col-xl-8" style="padding-right: 0px; padding-left: 0px; border-radius: 12px; overflow: hidden;">
+    <div id="myCarousel" class="carousel slide style-carousel" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active" style="margin-right: 10px;"></li>
+        <li data-target="#myCarousel" data-slide-to="1" style="margin-right: 10px;"></li>
+        <li data-target="#myCarousel" data-slide-to="2" style="margin-right: 10px;"></li>
+        <li data-target="#myCarousel" data-slide-to="3" style="margin-right: 10px;"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <% if @impressions.first.nil? %>
+            <img src="https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="anh dep" width="100%" class="object-fit">
+          <% else %>
+            <%= link_to blog_post_path(@impressions.first), class: 'text-decoration-none' do %>
+              <%= image_tag(@impressions.first.header_image, width: '100%', class: "object-fit") %>
+              <div class="carousel-caption">
+                <div style="background-color: rgb(100,102,106,0.5); padding: 12px 0px;">
+                  <h3 style="display: block; margin-bottom: 10px; font-size: 26px; margin-top: 0px;"><%= @impressions.first.title %></h3>
+                  <p style="display: block; font-size: 16px; margin-bottom: 0px;"><%= truncate(@impressions.first.description, length: 100) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="carousel-item">
+          <% if @impressions.second.nil? %>
+            <img src="https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="anh dep" width="100%" class="object-fit">
+          <% else %>
+            <%= link_to blog_post_path(@impressions.second), class: 'text-decoration-none' do %>
+              <%= image_tag(@impressions.second.header_image, width: '100%', class: "object-fit") %>
+              <div class="carousel-caption">
+                <div style="background-color: rgb(100,102,106,0.5); padding: 12px 0px;">
+                  <h3 style="display: block; margin-bottom: 10px; font-size: 26px; margin-top: 0px;"><%= @impressions.second.title %></h3>
+                  <p style="display: block; font-size: 16px; margin-bottom: 0px;"><%= truncate(@impressions.second.description, length: 100) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      
+        <div class="carousel-item">
+          <% if @impressions.third.nil? %>
+            <img src="https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="anh dep" width="100%" class="object-fit">
+          <% else %>
+            <%= link_to blog_post_path(@impressions.third), class: 'text-decoration-none' do %>
+              <%= image_tag(@impressions.third.header_image, width: '100%', class: "object-fit") %>
+              <div class="carousel-caption">
+                <div style="background-color: rgb(100,102,106,0.5); padding: 12px 0px;">
+                  <h3 style="display: block; margin-bottom: 10px; font-size: 26px; margin-top: 0px;"><%= @impressions.third.title %></h3>
+                  <p style="display: block; font-size: 16px; margin-bottom: 0px;"><%= truncate(@impressions.third.description, length: 100) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="carousel-item">
+          <% if @impressions.fourth.nil? %>
+            <img src="https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="anh dep" width="100%" class="object-fit">
+          <% else %>
+            <%= link_to blog_post_path(@impressions.fourth), class: 'text-decoration-none' do %>
+              <%= image_tag(@impressions.fourth.header_image, width: '100%', class: "object-fit") %>
+              <div class="carousel-caption">
+                <div style="background-color: rgb(100,102,106,0.5); padding: 12px 0px;">
+                  <h3 style="display: block; margin-bottom: 10px; font-size: 26px; margin-top: 0px;"><%= @impressions.fourth.title %></h3>
+                  <p style="display: block; font-size: 16px; margin-bottom: 0px;"><%= truncate(@impressions.fourth.description, length: 100) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="carousel-item">
+          <% if @impressions.fifth.nil? %>
+            <img src="https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="anh dep" width="100%" class="object-fit">
+          <% else %>
+            <%= link_to blog_post_path(@impressions.fifth), class: 'text-decoration-none' do %>
+              <%= image_tag(@impressions.fifth.header_image, width: '100%', class: "object-fit") %>
+              <div class="carousel-caption">
+                <div style="background-color: rgb(100,102,106,0.5); padding: 12px 0px;">
+                  <h3 style="display: block; margin-bottom: 10px; font-size: 26px; margin-top: 0px;"><%= @impressions.fifth.title %></h3>
+                  <p style="display: block; font-size: 16px; margin-bottom: 0px;"><%= truncate(@impressions.fifth.description, length: 100) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 col-xl-4 p-4">
+    <div style="display: flex; margin-bottom: 1.2rem; -webkit-box-align: center; align-items: center; justify-content: center; margin-right: 40px;">
+      <i class="fas fa-clock" style="color: #62e584; font-size: 20px; margin-right: 15px;"></i>
+      <span style="font-size: 1.4rem; font-weight: 650; margin-bottom: 0px; font-family: sans-serif">ĐỌC NHIỀU</span>
+    </div>
+    <% if @impressions.first.nil? %>
+      <h4 style="font-weight: 620; margin-bottom: 15px; font-size: 21px;">Hiện tại chưa có post nào</h4>
+    <% else %>
+      <%= link_to blog_post_path(@impressions.first), class: 'link-impression' do %>
+        <h4 style="font-weight: 620; margin-bottom: 15px; font-size: 21px;"><%= @impressions.first.title %></h4>
+        <p style="font-weight: 500; font-size: 15px; margin-bottom: 3px;"><%= truncate(@impressions.first.description, length: 100) %></p>
+        <p style="font-weight: 500; font-size: 15px; text-align: right; margin-bottom: 5px"><%= @impressions.first.impressionist_count %> lượt đọc</p>
+      <% end %>
+    <% end %>
+    <hr style="margin-top: 5px; margin-bottom: 5px; border-top: 1px solid rgba(0,0,0,0.5);">
+    <% if @impressions.second.nil? %>
+      <h4 style="font-weight: 620; margin-bottom: 15px; font-size: 21px;">Hiện tại chưa có post nào</h4>
+    <% else %>
+      <%= link_to blog_post_path(@impressions.second), class: 'link-impression' do %>
+        <h4 style="font-weight: 620; margin-bottom: 15px; font-size: 21px;"><%= @impressions.second.title %></h4>
+        <p style="font-weight: 500; font-size: 15px; margin-bottom: 3px;"><%= truncate(@impressions.second.description, length: 100) %></p>
+        <p style="font-weight: 500; font-size: 15px; text-align: right; margin-bottom: 5px"><%= @impressions.second.impressionist_count %> lượt đọc</p>
+      <% end %>
+    <% end %>
+    <hr style="margin-top: 5px; margin-bottom: 5px; border-top: 1px solid rgba(0,0,0,0.5);">
+    <% if @impressions.third.nil? %>
+      <h4 style="font-weight: 620; margin-bottom: 15px; font-size: 21px;">Hiện tại chưa có post nào</h4>
+    <% else %>
+      <%= link_to blog_post_path(@impressions.third), class: 'link-impression' do %>
+        <h4 style="font-weight: 620; margin-bottom: 15px; font-size: 21px;"><%= @impressions.third.title %></h4>
+        <p style="font-weight: 500; font-size: 15px; margin-bottom: 3px;"><%= truncate(@impressions.third.description, length: 100) %></p>
+        <p style="font-weight: 500; font-size: 15px; text-align: right; margin-bottom: 5px"><%= @impressions.third.impressionist_count %> lượt đọc</p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+<h1 style="text-align: center; margin-bottom: 2.5rem; font-weight: bold;">Bài viết mới nhất</h1>
+<div class="row">
+  <% @posts.each do |post| %>
+    <div class="col-md-6 col-lg-4 mb-4 slidePost">
+      <%= link_to blog_post_path(post), class: 'text-decoration-none' do %>
+        <div class="card post-card">
+          <div class="boder">
+            <div class="layer"><i class="fas fa-mouse" style="margin-top: 25%; margin-left: 50%; font-size: 30px; color: #0dc7e5;"></i></div>
+            <div class="header-image" style="background-image: url(<%= url_for(post.header_image) %>);"></div>
+          </div>
+          <div class="card-body d-flex flex-column bg-light" style="height: 170px;">
+            <div style="height: 110px;">
+              <h5 class="card-title" style="font-weight: 650; font-size: 19px;"><%= post.title %></h5>
+            </div>
+            <p class="card-text" style="margin-bottom: 0px; font-weight: 400;"><%= truncate(post.description, length: 100) %></p>
+            <p class="card-text" style="text-align: right; font-weight: 400;"><%= post.impressionist_count %> lượt đọc</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<button class="btn btn-primary" style="display: block; margin: 0 auto; margin-top: 20px;" onclick="plusCount()">Xem thêm <i class="fas fa-angle-down ml-2" style="font-size: 11px"></i></button>
+
+<script>
+  var slidecount = 3;
+  showCount();
+
+  function plusCount()
+  {
+    slidecount = slidecount + 3;
+    showCount();
+  }
+
+  function showCount()
+  {
+    var i;
+    var x = document.getElementsByClassName("slidePost");
+    for(i=0;i<x.length;i++)
+    {
+      x[i].style.display = "none";
+    }
+    for(i=0;i<slidecount;i++)
+    {
+      x[i].style.display = "block";
+    }
+  }
+</script>
