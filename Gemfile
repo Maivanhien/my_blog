@@ -9,7 +9,6 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # gem 'sqlite3', '~> 1.4'
 # Use postgres SQl
 gem 'pg'
-gem 'rails_12factor'
 gem 'devise'
 gem 'friendly_id'
 gem 'dotenv-rails'
